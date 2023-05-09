@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Conversor de Temperatura</title>
+  </head>
+  <body class="flex items-center justify-center h-screen bg-sky-100">
+    <div
+      class="flex flex-col items-center justify-center text-center border-black border-2 p-40 bg-sky-200"
+    >
+      <h1 class="text-3xl">Conversor de Temperatura</h1>
+
+      <input
+        class="max-w-[150px] mt-4 p-1 rounded-lg border-2 focus:outline-none focus:ring-2"
+        id="temp"
+        type="number"
+        placeholder="Temperatura"
+      />
+
+      <p class="mt-4 text-[20px]">Converter para</p>
+
+      <select
+        class="mt-4 py-1 px-2 rounded-lg appearance-none"
+        name="temperatura"
+        id="options"
+      >
+        <option id="fah" value="fahrenheit">Fahrenheit</option>
+        <option id="cel" value="celsius">Celsius</option>
+      </select>
+
+      <button
+        class="mt-4 bg-sky-500 hover:bg-sky-600 py-2 px-4 rounded-full font-bold text-white"
+        onclick="converter()"
+      >
+        Converter
+      </button>
+      <p class="mt-4 text-2xl" id="res"></p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
